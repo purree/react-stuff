@@ -1,0 +1,59 @@
+{
+  "name": "expensify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gustav Junedahl",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "serve": "live-server public/",
+    "dev-server": "webpack-dev-server",
+    "build": "webpack",
+    "test": "jest"
+  },
+  "jest": {
+    "testURL": "http://localhost/",
+    "setupFiles": [
+      "<rootDir>/src/tests/setupTests.js"
+    ],
+    "roots": [
+      "<rootDir>/src/tests/"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.4.2",
+    "live-server": "^1.2.0",
+    "moment": "^2.22.2",
+    "node-sass": "^4.9.2",
+    "normalize.css": "^8.0.0",
+    "react": "^16.3.2",
+    "react-dates": "^17.1.1",
+    "react-dom": "^16.3.2",
+    "react-modal": "^3.5.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-test-renderer": "^16.4.2",
+    "redux": "^4.0.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "uuid": "^3.3.2",
+    "validator": "^10.2.0",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
