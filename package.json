@@ -7,8 +7,9 @@
   "private": true,
   "scripts": {
     "serve": "live-server public/",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "build": "webpack",
     "test": "jest"
   },
   "jest": {
@@ -37,6 +38,7 @@
     "enzyme-to-json": "^3.3.4",
     "jest": "^23.4.2",
     "live-server": "^1.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
     "moment": "^2.22.2",
     "node-sass": "^4.9.2",
     "normalize.css": "^8.0.0",
