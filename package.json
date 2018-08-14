@@ -10,7 +10,8 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest"
+    "test": "jest",
+    "start": "node server/server.js"
   },
   "jest": {
     "testURL": "http://localhost/",
