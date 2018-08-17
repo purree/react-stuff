@@ -5,16 +5,18 @@ import Header from '../components/Header';
 
 
 export const PrivateRoute = ({ isAuthenticated, component: Component, ...rest }) => (
-    <div>
-        <Header />
-        <Route {...rest} component={(props) => (
-            isAuthenticated ? (
+
+    <Route {...rest} component={(props) => (
+
+        isAuthenticated ? (
+            <div>
+                <Header />
                 <Component {...props} />
-            ) : (
-                    <Redirect to="/" />
-                )
-        )} />
-    </div>
+            </div>
+        ) : (
+                <Redirect to="/" />
+            )
+    )} />
 );
 
 const mapStateToProps = (state) => ({
