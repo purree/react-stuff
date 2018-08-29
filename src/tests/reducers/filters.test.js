@@ -6,6 +6,7 @@ test('should setup defualt values', () => {
     expect(state).toEqual({
         text: '',
         sortBy: 'date',
+        tag: '',
         startDate: moment().startOf('month'),
         endDate: moment().endOf('month'),
     });
@@ -19,6 +20,7 @@ test('should setup sortBy to amount', () => {
 test('should setup sortBy to date', () => {
     const currentState = {
         text: '',
+        tag: '',
         startDate: undefined,
         endDate: undefined,
         sortBy: 'amount'
@@ -32,6 +34,13 @@ test('should set text filter', () => {
     const action = { type: 'SET_TEXT_FILTER', text };
     const state = filtersReducer(undefined, action);
     expect(state.text).toBe(text);
+});
+
+test('should set tag filter', () => {
+    const tag = 'BLUE';
+    const action = { type: 'SET_TAG_FILTER', tag };
+    const state = filtersReducer(undefined, action);
+    expect(state.tag).toBe(tag);
 });
 
 test('should set startDate filter', () => {

@@ -70,8 +70,9 @@ test('test the forms onSubmit', () => {
     expect(wrapper.state('error')).toBe(false);
     expect(onSubmitSpy).toHaveBeenLastCalledWith({
         description: expenses[0].description,
-        amount:expenses[0].amount,
         note:expenses[0].note,
+        tag:expenses[0].tag,
+        amount:expenses[0].amount,
         createdAt: expenses[0].createdAt
     })
 });

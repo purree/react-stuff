@@ -41,6 +41,40 @@ exports[`should render ExpenseListFilters 1`] = `
     <div
       className="input-group__item"
     >
+      <select
+        className="select"
+        onChange={[Function]}
+      >
+        <option
+          value="BLUE"
+        >
+          Blue
+        </option>
+        <option
+          value="RED"
+        >
+          Red
+        </option>
+        <option
+          value="GREEN"
+        >
+          Green
+        </option>
+        <option
+          value="YELLOW"
+        >
+          Yellow
+        </option>
+        <option
+          value="ORANGE"
+        >
+          Orange
+        </option>
+      </select>
+    </div>
+    <div
+      className="input-group__item"
+    >
       <withStyles(DateRangePicker)
         anchorDirection="left"
         appendToBody={false}
@@ -176,6 +210,40 @@ exports[`should render ExpenseListFilters with alt data 1`] = `
           value="amount"
         >
           Amount
+        </option>
+      </select>
+    </div>
+    <div
+      className="input-group__item"
+    >
+      <select
+        className="select"
+        onChange={[Function]}
+      >
+        <option
+          value="BLUE"
+        >
+          Blue
+        </option>
+        <option
+          value="RED"
+        >
+          Red
+        </option>
+        <option
+          value="GREEN"
+        >
+          Green
+        </option>
+        <option
+          value="YELLOW"
+        >
+          Yellow
+        </option>
+        <option
+          value="ORANGE"
+        >
+          Orange
         </option>
       </select>
     </div>

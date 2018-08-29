@@ -1,4 +1,4 @@
-import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../../actions/filters';
+import { setTextFilter, setTagFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../../actions/filters';
 import moment from 'moment';
 
 test('should generate a set start date action object', () => {
@@ -15,7 +15,22 @@ test('should generate a set end date action object', () => {
     });
 });
 
-test('should generate a set text action object with default (empty string) ', () => {
+test('should generate a set tag action object with default (empty string) ', () => {
+    expect(setTagFilter()).toEqual({
+        type: 'SET_TAG_FILTER',
+        tag: 'BLUE'
+    });
+});
+
+test('should generate a set tag action object with the set tag', () => {
+    const tag = 'GREEN'
+    expect(setTagFilter(tag)).toEqual({
+        type: 'SET_TAG_FILTER',
+        tag
+    });
+});
+
+test('should generate a set tag action object with default (empty string) ', () => {
     expect(setTextFilter()).toEqual({
         type: 'SET_TEXT_FILTER',
         text: ''

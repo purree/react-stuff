@@ -9,7 +9,7 @@ exports[`should render error 1`] = `
     autoFocus={true}
     className="text-input"
     onChange={[Function]}
-    placeholder="Decription"
+    placeholder="Description"
     type="text"
     value=""
   />
@@ -20,6 +20,37 @@ exports[`should render error 1`] = `
     type="text"
     value=""
   />
+  <select
+    className="tag-input"
+    onChange={[Function]}
+    value="BLUE"
+  >
+    <option
+      value="BLUE"
+    >
+      Blue
+    </option>
+    <option
+      value="RED"
+    >
+      Red
+    </option>
+    <option
+      value="GREEN"
+    >
+      Green
+    </option>
+    <option
+      value="YELLOW"
+    >
+      Yellow
+    </option>
+    <option
+      value="ORANGE"
+    >
+      Orange
+    </option>
+  </select>
   <withStyles(SingleDatePicker)
     anchorDirection="left"
     appendToBody={false}
@@ -139,7 +170,7 @@ exports[`should render error 2`] = `
     autoFocus={true}
     className="text-input"
     onChange={[Function]}
-    placeholder="Decription"
+    placeholder="Description"
     type="text"
     value=""
   />
@@ -150,6 +181,37 @@ exports[`should render error 2`] = `
     type="text"
     value=""
   />
+  <select
+    className="tag-input"
+    onChange={[Function]}
+    value="BLUE"
+  >
+    <option
+      value="BLUE"
+    >
+      Blue
+    </option>
+    <option
+      value="RED"
+    >
+      Red
+    </option>
+    <option
+      value="GREEN"
+    >
+      Green
+    </option>
+    <option
+      value="YELLOW"
+    >
+      Yellow
+    </option>
+    <option
+      value="ORANGE"
+    >
+      Orange
+    </option>
+  </select>
   <withStyles(SingleDatePicker)
     anchorDirection="left"
     appendToBody={false}
@@ -264,7 +326,7 @@ exports[`should render expenseform 1`] = `
     autoFocus={true}
     className="text-input"
     onChange={[Function]}
-    placeholder="Decription"
+    placeholder="Description"
     type="text"
     value=""
   />
@@ -275,6 +337,37 @@ exports[`should render expenseform 1`] = `
     type="text"
     value=""
   />
+  <select
+    className="tag-input"
+    onChange={[Function]}
+    value="BLUE"
+  >
+    <option
+      value="BLUE"
+    >
+      Blue
+    </option>
+    <option
+      value="RED"
+    >
+      Red
+    </option>
+    <option
+      value="GREEN"
+    >
+      Green
+    </option>
+    <option
+      value="YELLOW"
+    >
+      Yellow
+    </option>
+    <option
+      value="ORANGE"
+    >
+      Orange
+    </option>
+  </select>
   <withStyles(SingleDatePicker)
     anchorDirection="left"
     appendToBody={false}
@@ -389,7 +482,7 @@ exports[`should render expenseform with data 1`] = `
     autoFocus={true}
     className="text-input"
     onChange={[Function]}
-    placeholder="Decription"
+    placeholder="Description"
     type="text"
     value="Banana"
   />
@@ -400,6 +493,37 @@ exports[`should render expenseform with data 1`] = `
     type="text"
     value="0.9"
   />
+  <select
+    className="tag-input"
+    onChange={[Function]}
+    value="BLUE"
+  >
+    <option
+      value="BLUE"
+    >
+      Blue
+    </option>
+    <option
+      value="RED"
+    >
+      Red
+    </option>
+    <option
+      value="GREEN"
+    >
+      Green
+    </option>
+    <option
+      value="YELLOW"
+    >
+      Yellow
+    </option>
+    <option
+      value="ORANGE"
+    >
+      Orange
+    </option>
+  </select>
   <withStyles(SingleDatePicker)
     anchorDirection="left"
     appendToBody={false}

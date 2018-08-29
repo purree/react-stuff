@@ -2,6 +2,6 @@
 
 exports[`should render the NotFoundPage 1`] = `
 <div>
-  Page not found :'(
+  404 - Page not found :'(
 </div>
 `;

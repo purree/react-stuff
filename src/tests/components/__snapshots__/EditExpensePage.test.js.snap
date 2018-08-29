@@ -26,6 +26,7 @@ exports[`should render editExpensePage 1`] = `
           "description": "Apple",
           "id": "2",
           "note": "",
+          "tag": "GREEN",
         }
       }
       onSubmit={[Function]}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../actions/filters';
+import { setTextFilter, setTagFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../actions/filters';
 import { DateRangePicker } from 'react-dates';
 
 export class ExpenseListFilters extends React.Component {
@@ -17,11 +17,18 @@ export class ExpenseListFilters extends React.Component {
     onTextChange = (e) => {
         this.props.setTextFilter(e.target.value);
     }
-    onSelectChange = (e) => {
+    onOrderChange = (e) => {
         if (e.target.value === 'date') {
             this.props.sortByDate();
         } else if ((e.target.value === 'amount')) {
             this.props.sortByAmount();
+        }
+    }
+    onTagChange = (e) => {
+        if (e.target.value === this.props.filters.tag) {
+            this.props.setTagFilter();
+        } else {
+            this.props.setTagFilter(e.target.value);
         }
     }
     render() {
@@ -41,10 +48,23 @@ export class ExpenseListFilters extends React.Component {
                         <select
                             className="select"
                             value={this.props.filters.sortBy}
-                            onChange={this.onSelectChange}
+                            onChange={this.onOrderChange}
                         >
                             <option value="date">Date</option>
                             <option value="amount">Amount</option>
+                        </select>
+                    </div>
+                    <div className="input-group__item">
+                        <select
+                            className="select"
+                            value={this.props.filters.tag}
+                            onChange={this.onTagChange}
+                        >
+                            <option value="BLUE">Blue</option>
+                            <option value="RED">Red</option>
+                            <option value="GREEN">Green</option>
+                            <option value="YELLOW">Yellow</option>
+                            <option value="ORANGE">Orange</option>
                         </select>
                     </div>
                     <div className="input-group__item">
@@ -78,7 +98,8 @@ const mapDispatchToProps = (dispatch) => ({
     setEndDate: (endDate) => dispatch(setEndDate(endDate)),
     sortByDate: () => dispatch(sortByDate()),
     sortByAmount: () => dispatch(sortByAmount()),
-    setTextFilter: (text) => dispatch(setTextFilter(text))
+    setTextFilter: (text) => dispatch(setTextFilter(text)),
+    setTagFilter: (tag) => dispatch(setTagFilter(tag))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExpenseListFilters);

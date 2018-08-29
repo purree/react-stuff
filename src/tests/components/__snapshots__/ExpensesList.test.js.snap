@@ -33,6 +33,7 @@ exports[`should render ExpenseList 1`] = `
       id="1"
       key="1"
       note=""
+      tag="BLUE"
     />
     <ExpenseListItem
       amount={200}
@@ -41,6 +42,7 @@ exports[`should render ExpenseList 1`] = `
       id="2"
       key="2"
       note=""
+      tag="GREEN"
     />
     <ExpenseListItem
       amount={5000}
@@ -49,6 +51,7 @@ exports[`should render ExpenseList 1`] = `
       id="3"
       key="3"
       note=""
+      tag="YELLOW"
     />
   </div>
 </div>

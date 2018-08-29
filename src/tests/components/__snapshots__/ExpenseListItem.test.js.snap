@@ -15,7 +15,7 @@ exports[`should render ExpenseListItem 1`] = `
     <span
       className="list-item__subtitle"
     >
-      4th Jan 1970
+      01 Jan 1970
     </span>
   </div>
   <h3
