@@ -5,7 +5,6 @@ export const setTextFilter = (text = '') => ({
 
 export const sortByDate = () => ({
     type: 'SORT_BY_DATE'
-
 });
 
 export const sortByAmount = () => ({
@@ -25,4 +24,8 @@ export const setStartDate = (startDate) => ({
 export const setEndDate = (endDate) => ({
     type: 'SET_ENDDATE',
     endDate
+});
+
+export const clearFilters = () => ({
+    type: 'CLEAR_FILTERS'
 });

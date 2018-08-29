@@ -171,6 +171,15 @@ exports[`should render ExpenseListFilters 1`] = `
         withPortal={false}
       />
     </div>
+    <div
+      className="input-group__item"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Clear filters
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -345,6 +354,15 @@ exports[`should render ExpenseListFilters with alt data 1`] = `
         withFullScreenPortal={false}
         withPortal={false}
       />
+    </div>
+    <div
+      className="input-group__item"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Clear filters
+      </button>
     </div>
   </div>
 </div>

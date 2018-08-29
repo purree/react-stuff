@@ -34,6 +34,10 @@ export default (state = filterReducerDefaultState, action) => {
             return {
                 ...state, endDate: action.endDate
             };
+        case 'CLEAR_FILTERS':
+            return {
+                ...state, ...filterReducerDefaultState
+            };
         default:
             return state;
     }

@@ -87,7 +87,7 @@ exports[`should render a empty ExpenseList 1`] = `
       className="list-item list-item--message"
     >
       <p>
-        Add some Expenses!
+        All expenses hiding behind filters
       </p>
     </div>
   </div>

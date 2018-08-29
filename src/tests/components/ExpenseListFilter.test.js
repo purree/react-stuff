@@ -5,7 +5,7 @@ import expenses from '../fixtures/expenses';
 import { filters, altFilters } from '../fixtures/filters';
 import moment from 'moment';
 
-let setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate, wrapper;
+let setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate, clearFilters, wrapper;
 
 beforeEach(() => {
     setTextFilter = jest.fn();
@@ -13,6 +13,7 @@ beforeEach(() => {
     sortByAmount = jest.fn();
     setStartDate = jest.fn();
     setEndDate = jest.fn();
+    clearFilters = jest.fn();
     wrapper = shallow(<ExpenseListFilters
         filters={filters}
         setTextFilter={setTextFilter}
@@ -20,6 +21,7 @@ beforeEach(() => {
         setEndDate={setEndDate}
         sortByAmount={sortByAmount}
         sortByDate={sortByDate}
+        clearFilters={clearFilters}
     />);
 });
 
@@ -38,6 +40,11 @@ test('should change setTextFilter onChange', () => {
         target: { value }
     });
     expect(setTextFilter).toHaveBeenLastCalledWith(value);
+});
+
+test('should change sort to date', () => {
+    wrapper.find('button').at(0).simulate('click');
+    expect(clearFilters).toHaveBeenCalled();
 });
 
 test('should change sort to date', () => {

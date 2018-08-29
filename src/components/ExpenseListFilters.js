@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setTextFilter, setTagFilter, sortByDate, sortByAmount, setStartDate, setEndDate } from '../actions/filters';
+import { setTextFilter, setTagFilter, sortByDate, sortByAmount, setStartDate, setEndDate, clearFilters } from '../actions/filters';
 import { DateRangePicker } from 'react-dates';
 
 export class ExpenseListFilters extends React.Component {
@@ -16,6 +16,9 @@ export class ExpenseListFilters extends React.Component {
     }
     onTextChange = (e) => {
         this.props.setTextFilter(e.target.value);
+    }
+    onClearFilters = (e) => {
+        this.props.clearFilters();
     }
     onOrderChange = (e) => {
         if (e.target.value === 'date') {
@@ -81,6 +84,11 @@ export class ExpenseListFilters extends React.Component {
                             showClearDates={true}
                         />
                     </div>
+                    <div className="input-group__item">
+                        <button className="button" onClick={this.onClearFilters}>
+                            Clear filters
+                        </button>
+                    </div>
                 </div>
             </div>
         );
@@ -99,7 +107,8 @@ const mapDispatchToProps = (dispatch) => ({
     sortByDate: () => dispatch(sortByDate()),
     sortByAmount: () => dispatch(sortByAmount()),
     setTextFilter: (text) => dispatch(setTextFilter(text)),
-    setTagFilter: (tag) => dispatch(setTagFilter(tag))
+    setTagFilter: (tag) => dispatch(setTagFilter(tag)),
+    clearFilters: () => dispatch(clearFilters())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExpenseListFilters);

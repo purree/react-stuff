@@ -15,7 +15,7 @@ export const ExpensesList = (props) => (
             props.expenses.length === 0 ?
             (
                 <div className="list-item list-item--message">
-                <p>Add some Expenses!</p>
+                <p>{props.totalExpenses === 0 ? ('Add some Expenses!') : ('All expenses hiding behind filters') }</p>
                 </div>
             ) : (
                 props.expenses.map(
@@ -30,6 +30,7 @@ export const ExpensesList = (props) => (
 const mapStateToProps = (state) => {
     return {
         expenses: selectExpenses(state.expenses, state.filters),
+        totalExpenses: state.expenses.length,
     };
 };
 

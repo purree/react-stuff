@@ -12,6 +12,24 @@ test('should setup defualt values', () => {
     });
 });
 
+test('should clear all filters', () => {
+    const currentState = {
+        text: 'test-test',
+        tag: 'GREEN',
+        startDate: moment().startOf('month').add(4, 'days'),
+        endDate: moment().endOf('month').subtract(4, 'days'),
+        sortBy: 'date'
+    };
+    const state = filtersReducer(currentState, { type: 'CLEAR_FILTERS' });
+    expect(state).toEqual({
+        text: '',
+        tag: '',
+        sortBy: 'date',
+        startDate: moment().startOf('month'),
+        endDate: moment().endOf('month'),
+    });
+});
+
 test('should setup sortBy to amount', () => {
     const state = filtersReducer(undefined, { type: 'SORT_BY_AMOUNT' });
     expect(state.sortBy).toBe('amount');
